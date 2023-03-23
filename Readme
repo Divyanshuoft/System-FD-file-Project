@@ -1,4 +1,4 @@
-# Assignment 2: Recreating the System-Wide FD Tables by Divyansh Kachchhava
+#Assignment 2: Recreating the System-Wide FD Tables by Divyansh Kachchhava
 This program will build a tool to display the tables used by the OS to keep track of open files, assignation of File Descriptors (FD) and processess. It's very helpful to keep track of the files in the system
 
 Usage
