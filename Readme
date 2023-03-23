@@ -1,13 +1,13 @@
-###Assignment 2: Recreating the System-Wide FD Tables by Divyansh Kachchhava
+## Assignment 2: Recreating the System-Wide FD Tables by Divyansh Kachchhava
 This program will build a tool to display the tables used by the OS to keep track of open files, assignation of File Descriptors (FD) and processess. It's very helpful to keep track of the files in the system
 
-Usage
+### Usage
 To run the program, execute the following command:
 
-css
+``` css
 Copy code
 ./fda [-p pid] [-t threshold] [-P] [-S] [-V] [-T] [-C]
-where:
+```
 
 -p pid: specifies the PID of the process to be analyzed.
 -t threshold: specifies the threshold for the number of file descriptors that a process must have to be considered in the output.
@@ -16,12 +16,13 @@ where:
 -V: prints the file descriptors for each vnode in a vnode format.
 -T: prints the total number of file descriptors for each process that has file descriptors above the threshold.
 -C: prints the file descriptors for each file system object in a composite format.
-Implementation
+
+### Implementation
 The program analyzes file descriptors by reading the /proc directory in Linux. The program first reads the directories for each process, and then reads the files for each file descriptor for each process. For each file descriptor, the program extracts the file name and inode number, and then prints the information as specified by the command line arguments.
 
 The program uses linked lists to keep track of the file descriptors for each process. When a new file descriptor is encountered, the program checks if the process is already in the linked list, and if not, it adds the process to the list. The program then adds the file descriptor to the linked list for the process.
 
-Functions
+### Functions
 The program is implemented using the following functions:
 
 createNode(): creates a new node for the linked list.
